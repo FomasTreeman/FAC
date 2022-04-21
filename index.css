@@ -1,0 +1,27 @@
+body {
+    background-color: blueviolet;
+    display: grid;
+}    
+
+html {
+    height: 100%;
+}
+
+header {
+    font-size: 3rem;
+}
+
+button {
+    background-color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: navy;
+    font-size: large;
+}
+
+#buttons, header, div, a {
+    justify-self: center;
+    padding: 2rem;
+}
