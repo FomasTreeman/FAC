@@ -1,19 +1,25 @@
 body {
     background-color: blueviolet;
-    display: grid;
-}    
+}
 
 html {
     height: 100%;
+    font-family: monospace;
+}
+
+.container {
+    display: grid;
 }
 
 header {
     font-size: 3rem;
+    font-style: italic;
 }
 
 button {
     background-color: yellow;
 }
+
 
 a {
     text-decoration: none;
@@ -21,7 +27,20 @@ a {
     font-size: large;
 }
 
-#buttons, header, div, a {
-    justify-self: center;
+a:hover {
+    color: whitesmoke;
+}
+
+#buttons,
+header,
+div,
+a {
     padding: 2rem;
+    justify-self: center;
+}
+
+.prompts {
+    position: absolute;
+    bottom: 20px;
+    justify-self: baseline;
 }

@@ -8,17 +8,34 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header> image carousel </header>
-    <div id="img"> </div>
-    <div id="buttons">
-        <button onclick="" id="previous"> previous </button>
-        <button onclick="" id="next"> next </button>
+    <div class="container"> 
+        <header> IMAGE CAROUSEL </header>
+        <div id="img"> </div>
+        <div id="buttons">
+            <button onclick="" id="previous"> previous </button>
+            <button onclick="" id="next"> next </button>
+        </div>
+        <div>
+            <p style="text-decoration:underline;"> Why am I applying for this programme? </p>
+            <p> I'm applying for this programme for a headstart into the software developing world.
+                I don't want to be a general labourer on a construction site for the rest of my days.
+                My brain is wired to solve problems. 
+                I need direction and mentoring to set me on the right path to fulfil my ambition to work as part of a team developing software solutions.
+            </p>
+        </div>
+        <div>
+            <a href="https://www.freecodecamp.org/fomas_treeman">My freeCodeCamp account :)</a>
+            <a href="https://github.com/FomasTreeman/FAC">My github repo :)</a>
+        </div>
+        <div class="prompts">
+            <h1> weekly prompts </h1>
+            <a href="https://github.com/FomasTreeman/FAC_tributepage">tribute page</a>
+            <a href="https://github.com/FomasTreeman/FAC-Arrays">arrays</a>
+            <a href="https://github.com/FomasTreeman/FAC-dom">dom</a>
+
+            
+        </div>
     </div>
-    <div>
-        <p style="text-decoration:underline;"> Why am i applying for this programme? </p>
-        <p> I'm applying for this programme for a headstart into the software developing world </p>
-    </div>
-    <a href="https://www.freecodecamp.org/fomas_treeman">My freeCodeCamp account :)</a>
 </body>
 <script>
     document.getElementById("next").addEventListener("click", nextImage);
