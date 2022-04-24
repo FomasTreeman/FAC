@@ -44,3 +44,7 @@ a {
     bottom: 20px;
     justify-self: baseline;
 }
+
+#portfolio {
+    color:rgb(101, 245, 66);
+}
