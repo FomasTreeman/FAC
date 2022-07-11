@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAC</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div class="container"> 
-        <header> IMAGE CAROUSEL </header>
-        <div id="img"> </div>
-        <div id="buttons">
-            <button onclick="" id="previous"> previous </button>
-            <button onclick="" id="next"> next </button>
-        </div>
-        <div>
-            <p style="text-decoration:underline;"> Why am I applying for this programme? </p>
-            <p> I'm applying for this programme for a headstart into the software developing world.
-                I don't want to be a general labourer on a construction site for the rest of my days.
-                My brain is wired to solve problems. 
-                I need direction and mentoring to set me on the right path to fulfil my ambition to work as part of a team developing software solutions.
-            </p>
-        </div>
-        <div>
-            <a href="https://www.freecodecamp.org/fomas_treeman">My freeCodeCamp account :)</a>
-            <a href="https://github.com/FomasTreeman/FAC">My github repo :)</a>
-        </div>
-        <div class="prompts">
-            <h1> weekly prompts </h1>
-            <a href="https://github.com/FomasTreeman/FAC_tributepage">tribute page</a>
-            <a href="https://github.com/FomasTreeman/FAC-functions">function</a>
-            <a href="https://github.com/FomasTreeman/FAC-dom">dom</a>
-            <a href="https://github.com/FomasTreeman/FAC-Arrays">arrays</a>
-            <a href="https://github.com/FomasTreeman/FAC-objects">objects</a>
-            <a href="https://github.com/FomasTreeman/FAC-flexbox">flexbox</a>
-            <a href="https://github.com/FomasTreeman/FAC-feature">feature</a>
-        </div>
-        <a href="https://fomastreeman.github.io/Portfolio/" id="portfolio" >My other projects</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAC</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <header> IMAGE CAROUSEL </header>
+            <div id="img"> </div>
+            <div id="buttons">
+                <button onclick="" id="previous"> previous </button>
+                <button onclick="" id="next"> next </button>
+            </div>
+            <div class="cardContainer">
+                <div class="card">
+                    <img src="img_avatar.png" alt="proj1">
+                    <div class="container">
+                        <h4>Tribute page</h4>
+                        <button onclick="hideDescription(1)"> hide </button>
+                        <p id="description1">This is a tribute page to Stan lee</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="proj2">
+                    <div class="container">
+                        <h4>Comment box</h4>
+                        <button onclick="hideDescription(2)"> hide </button>
+                        <p id="description2"> This project is a website for submitting comments and viewing comments.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="proj3">
+                    <div class="container">
+                        <h4>Fruit shop</h4>
+                        <button onclick="hideDescription(3)"> hide </button>
+                        <p id="description3">This project is shopping basket, where you can add or remove items from a basket and see the content of your basket.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="proj3">
+                    <div class="container">
+                        <h4>Feature</h4>
+                        <button onclick="hideDescription(4)"> hide </button>
+                        <p id="description4">A user can click a button to see a race between multiple tortoises from one side of the screen to the other. The tortoises move at different speeds in each race, and the user is notified who finished first. The user can alter the race in some way - by naming the tortoises; changing their speeds; or adding additional racers.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="text-decoration:underline;"> Who am I? </p>
+                <p> i am...
+                </p>
+                <p style="text-decoration:underline;"> Why am I applying for
+                    this programme? </p>
+                <p> I'm applying for this programme for a headstart into the
+                    software developing world.
+                    I don't want to be a general labourer on a construction site
+                    for the rest of my days.
+                    My brain is wired to solve problems.
+                    I need direction and mentoring to set me on the right path
+                    to fulfil my ambition to work as part of a team developing
+                    software solutions.
+                </p>
+            </div>
+            <div>
+                <a href="https://www.freecodecamp.org/fomas_treeman">My
+                    freeCodeCamp account :)</a>
+                <a href="https://github.com/FomasTreeman/FAC">My github repo :)</a>
+            </div>
+            <a href="https://github.com/FomasTreeman" id="portfolio">My github
+                home page</a>
+            <a href="https://fomastreeman.github.io/Portfolio/" id="portfolio">My
+                other portfolio page</a>
+            <a href="https://github.com/FomasTreeman/Comms" id="portfolio">My
+                current project in development, not yet deployed.</a>
+            <div class="prompts">
+                <h1> projects </h1>
+                <a href="https://github.com/FomasTreeman/FAC_tributepage">tribute
+                    page</a>
+                <a href="https://github.com/FomasTreeman/FAC-feature">feature</a>
+            </div>
+            <div class="prompts">
+                <h1> weekly prompts from last cohort </h1>
+                <a href="https://github.com/FomasTreeman/FAC_tributepage">tribute
+                    page</a>
+                <a href="https://github.com/FomasTreeman/FAC-functions">function</a>
+                <a href="https://github.com/FomasTreeman/FAC-dom">dom</a>
+                <a href="https://github.com/FomasTreeman/FAC-Arrays">arrays</a>
+                <a href="https://github.com/FomasTreeman/FAC-objects">objects</a>
+                <a href="https://github.com/FomasTreeman/FAC-flexbox">flexbox</a>
+                <a href="https://github.com/FomasTreeman/FAC-feature">feature</a>
+            </div>
 
-    </div>
-</body>
-<script>
+
+        </div>
+    </body>
+    <script>
     document.getElementById("next").addEventListener("click", nextImage);
     document.getElementById("previous").addEventListener("click", previousImage);
     var img = document.createElement("img");
@@ -70,5 +126,12 @@
         }
         img.src = images[count - 1];
     };
+
+    function hideDescription(num) {
+        var desc = document.getElementById("description" + num);
+        desc.style.display === "none" ? desc.style.display = "block" : desc.style.display = "none";
+        
+    }
+
 </script>
 </html>
