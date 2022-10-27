@@ -27,6 +27,10 @@ button:hover {
     background-color: rgba(202, 132, 34, 0.998);
 }
 
+img {
+    max-height: 20vh;
+}
+
 a {
     text-decoration: none;
     color: rgb(70, 0, 119);
@@ -37,7 +41,7 @@ a {
 header,
 div,
 a {
-    padding: 2rem;
+    padding: 1rem;
     justify-self: center;
 }
 
@@ -46,6 +50,12 @@ a {
     bottom: 0;
     padding-bottom: 0px;
     justify-self: baseline;
+}
+
+#linkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0%;
 }
 
 #portfolio {
