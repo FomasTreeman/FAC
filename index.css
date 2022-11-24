@@ -1,10 +1,16 @@
 body {
-    background-image:linear-gradient(90deg, rgb(131, 58, 180) 0%, rgba(213,38,78,1) 36%, rgba(234,113,73,1) 68%, rgba(246,157,33,0.9976584383753502) 100%);
+    background-image: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgba(213, 38, 78, 1) 36%, rgba(234, 113, 73, 1) 68%, rgba(246, 157, 33, 0.9976584383753502) 100%);
 }
 
-html, body {
+html,
+body {
     font-family: monospace;
 }
+
+#me {
+    padding-block: 3rem;
+}
+
 
 .container {
     display: grid;
@@ -17,7 +23,7 @@ header {
 }
 
 button {
-    background-color: rgba(246,157,33,0.9976584383753502);
+    background-color: rgba(246, 157, 33, 0.9976584383753502);
     font-family: inherit;
     border-radius: 5px;
     border: 0px;
@@ -25,6 +31,15 @@ button {
 
 button:hover {
     background-color: rgba(202, 132, 34, 0.998);
+}
+
+#container {
+    padding-bottom: 0%;
+}
+
+#one, #two, #three {
+    height: 4px;
+    border-radius: 2px;
 }
 
 img {
@@ -59,9 +74,30 @@ a {
 }
 
 #portfolio {
-    color:rgba(246,157,33,0.9976584383753502);
+    color: rgba(246, 157, 33, 0.9976584383753502);
 }
 
-a:hover, #portfolio:hover {
+a:hover,
+#portfolio:hover {
     color: whitesmoke;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
