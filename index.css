@@ -55,6 +55,10 @@ a {
     font-size: large;
 }
 
+#img, #buttons, #container {
+    width: fit-content;
+}
+
 #buttons,
 header,
 div,
@@ -85,16 +89,29 @@ a:hover,
     color: whitesmoke;
 }
 
-@keyframes fadeInThenOut {
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    width: 20vw;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
 
-    25% {
+    100% {
         opacity: 1;
     }
 
-    75% {
+}
+
+@keyframes fadeOut {
+    0% {
         opacity: 1;
     }
 
@@ -102,13 +119,3 @@ a:hover,
         opacity: 0;
     }
 }
-
-/* @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-} */

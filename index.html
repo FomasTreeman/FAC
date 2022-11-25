@@ -40,17 +40,19 @@
             current chat app project still in development</a>
         <a href="https://www.freecodecamp.org/fomas_treeman" id="portfolio">My
             freeCodeCamp account :)</a>
-        <div id="container">
-            <button id="one"> </button>
-            <button id="two"> </button>
-            <button id="three"> </button>
-        </div>
-        <div id="img"> </div>
-        <div id="buttons">
-            <button onclick="" id="previous">
-                < </button>
-                    <button onclick="" id="pause"> pause </button>
-                    <button onclick="" id="next"> > </button>
+        <div id="card">
+            <div id="container">
+                <button id="one"> </button>
+                <button id="two"> </button>
+                <button id="three"> </button>
+            </div>
+            <div id="img"> </div>
+            <div id="buttons">
+                <button onclick="" id="previous">
+                    < </button>
+                        <button onclick="" id="pause"> pause </button>
+                        <button onclick="" id="next"> > </button>
+            </div>
         </div>
         <div class="prompts">
             <h1> projects </h1>
@@ -105,18 +107,17 @@
         playing = !playing;
         pauseElement.setAttribute("id", pausePlay);
         pauseElement.innerText = pausePlay;
-        if (playing) automate();
+        playing ? automate() : clearTimeout(timer);
     });
     var img = document.createElement("img");
     var div = document.getElementById("img");
-    img.setAttribute("style", "animation: fadeInThenOut 2s linear infinite;")
     img.src = "./dog1.jpeg";
     div.appendChild(img);
     var i = 0;
     var intervalId;
     var timeoutId
     on(indicators[0])
-    setTimeout(automate, 2000);
+    setTimeout(automate, 3000);
 
     function on(button) {
         button.setAttribute("style", "background-color: white;");
@@ -126,27 +127,15 @@
         button.setAttribute("style", "background-color: rgba(246, 157, 33, 0.9976584383753502);");
     }
 
-
-    function resetAnimation() {
-        // img.style.animation = 'none';
-        img.offsetHeight; /* trigger reflow */
-        // setTimeout(() => {img.style.animation = ''}, 10);
-    }
-
-
     function automate() {
         on(indicators[i]);
         console.log(i);
-        // img.setAttribute("style", "display: none;");
         off(indicators[i]);
         i++;
         if (i == images.length) { i = 0 };
-        // let newone = img.cloneNode(true);
         img.src = images[i];
-        // img.replaceWith(newone);
-        resetAnimation();
         on(indicators[i]);
-        playing ? timer = setTimeout(automate, 2000) : clearTimeout(timer);
+        timer = setTimeout(automate, 2000);
     };
 
     function nextImage() {
