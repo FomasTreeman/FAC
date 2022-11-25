@@ -77,12 +77,13 @@
     </div>
 </body>
 <script>
+    var playing = true;
+    var timer;
     let images = [
         "./dog1.jpeg",
         "./dog2.heic",
         "./dog3.heic"
     ];
-    var playing = true;
     a = document.getElementById("one");
     b = document.getElementById("two");
     c = document.getElementById("three");
@@ -104,11 +105,11 @@
         playing = !playing;
         pauseElement.setAttribute("id", pausePlay);
         pauseElement.innerText = pausePlay;
-        if (playing) changeImage(); automate();
+        if (playing) automate();
     });
     var img = document.createElement("img");
     var div = document.getElementById("img");
-    img.setAttribute("style", "animation: fadeInThenOut 2s linear;")
+    img.setAttribute("style", "animation: fadeInThenOut 2s linear infinite;")
     img.src = "./dog1.jpeg";
     div.appendChild(img);
     var i = 0;
@@ -125,16 +126,13 @@
         button.setAttribute("style", "background-color: rgba(246, 157, 33, 0.9976584383753502);");
     }
 
-    // function changeImage() {
-    //     img.setAttribute("style", "animation: fadeInThenOut 3s;")
-    //     console.log("fadeIn animation");
-    //     timeIn = setTimeout(() => {
-    //         img.setAttribute("style", "")
-    //         console.log("display next image");
-    //         i == (images.length - 1) ? i = 0 : i++;
-    //         img.src = images[i];
-    //     }, 3000);
-    // }
+
+    function resetAnimation() {
+        // img.style.animation = 'none';
+        img.offsetHeight; /* trigger reflow */
+        // setTimeout(() => {img.style.animation = ''}, 10);
+    }
+
 
     function automate() {
         on(indicators[i]);
@@ -146,8 +144,9 @@
         // let newone = img.cloneNode(true);
         img.src = images[i];
         // img.replaceWith(newone);
+        resetAnimation();
         on(indicators[i]);
-        setTimeout(automate, 2000);
+        playing ? timer = setTimeout(automate, 2000) : clearTimeout(timer);
     };
 
     function nextImage() {
